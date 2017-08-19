@@ -1,7 +1,8 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome To {{title}}
-  </h1>
-  <p>Our First Hero is {{hero.name}}</p>
-</div>
+<h2>My Heroes</h2>
+    <ul class="heroes">
+    <li *ngFor="let h of heroes" (click)="onSelect(h)">
+        <span class="badge">{{h.id}}</span> {{h.name}}
+      </li>
+    </ul>
+
+<hero-detail [hero]="selectedHero"></hero-detail>
